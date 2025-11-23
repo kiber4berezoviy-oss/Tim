@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai кино советчки</title>
+</head>
+<body>
+    <h1>Ai кино советчик</h1>
+    <p>введите свое настроение, ИИ подберет вам фильм</p>
+    <form action="port">
+        <textarea name="message" id="message"  rows="4" cols="50">{{ user_text }}</textarea>
+        <button type="submit">Получить рекомендации</button>
+    </form>
+    {% if recommendation %}
+    <div class="result">
+        <h3>Результат</h3>
+        <p>{{ recommendation|safe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
